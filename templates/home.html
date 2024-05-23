@@ -1,3 +1,85 @@
-<h1>
-Hello_World
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaince Price Predictor</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="login">
+        <h1>Reliance Price Prediction Form</h1>
+        <form action="{{ url_for('predict')}}" method="POST">
+            <!-- Year -->
+            <label for="year">Year:</label>
+            <select id="year" name="int_1" required>
+                <option value="">Select Year</option>
+            </select><br><br>
+
+            <!-- Month -->
+            <label for="month">Month:</label>
+            <select id="month" name="int_2" required>
+                <option value="">Select Month</option>
+            </select><br><br>
+
+            <!-- Day -->
+            <label for="day">Day:</label>
+            <select id="day" name="int_3" required>
+                <option value="">Select Day</option>
+            </select><br><br>
+
+            <!-- Other inputs remain the same with placeholders -->
+            <label for="open">Open:</label>
+            <input type="number" id="open" name="float_4" placeholder="Enter Open Price" step="0.01" required><br><br>
+
+            <label for="high">High:</label>
+            <input type="number" id="high" name="float_5" placeholder="Enter High Price" step="0.01" required><br><br>
+
+            <label for="low">Low:</label>
+            <input type="number" id="low" name="float_6" placeholder="Enter Low Price" step="0.01" required><br><br>
+
+            <label for="volume">Volume:</label>
+            <input type="number" id="volume" name="float_7" placeholder="Enter Volume" step="0.01" required><br><br>
+
+            <label for="change">Change %:</label>
+            <input type="number" id="change" name="float_8" placeholder="Enter Change %" step="0.01" required><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        <br>
+        <br>
+
+        <p>{{prediction_text}}</p>
+    </div>
+    <script>
+        // Populate year select element
+        var yearSelect = document.getElementById("year");
+        for (var i = 2003; i <= 2024; i++) {
+            var option = document.createElement("option");
+            option.text = i;
+            option.value = i;
+            yearSelect.appendChild(option);
+        }
+
+        // Populate month select element
+        var monthSelect = document.getElementById("month");
+        for (var i = 1; i <= 12; i++) {
+            var option = document.createElement("option");
+            option.text = i;
+            option.value = i;
+            monthSelect.appendChild(option);
+        }
+
+        // Populate day select element
+        var daySelect = document.getElementById("day");
+        for (var i = 1; i <= 31; i++) {
+            var option = document.createElement("option");
+            option.text = i;
+            option.value = i;
+            daySelect.appendChild(option);
+        }
+    </script>
+</body>
+</html>

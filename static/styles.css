@@ -1,0 +1,75 @@
+/* Styles for the form */
+h1 {
+    font-size: 28px; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #333; /* Dark gray text color */
+    text-align: center; /* Center align the text */
+    margin-bottom: 20px; /* Add some space below the heading */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); /* Soft text shadow for depth */
+    letter-spacing: 1px; /* Increase letter spacing for elegance */
+}
+div {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 500px;
+}
+p {
+    text-align: center;
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, #f9f9f9, #e6e6e6); /* Gradient background */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background: antiquewhite;
+}
+
+/* Styles for form elements */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"] {
+    width: calc(100% - 20px); /* Adjusted width for padding */
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #4CAF50; /* Highlight border color on focus */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 26px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+body {
+    background-color: #d1c4c4;
+}
