@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__, static_url_path='/static')
 
 # Load the pre-trained model
-with open('./model_lr.pkl', 'rb') as model_file:
+with open('model_lr.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 @app.route('/')

@@ -13,7 +13,8 @@ conda init (restart the terminal)
 
 conda activate venv/
 
-pip install -r requirements.txt
+pip install --no-cache-dir -r requirements.txt
+
 
 # Configure the GitHub CLI
 git config --global user.name
