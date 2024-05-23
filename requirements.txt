@@ -2,3 +2,6 @@ Flask
 numpy
 pandas
 scikit-learn
+xgboost
+catboost
+lightgbm
